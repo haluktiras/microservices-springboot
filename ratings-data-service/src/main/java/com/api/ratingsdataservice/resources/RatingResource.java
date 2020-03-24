@@ -18,7 +18,7 @@ import static com.mongodb.client.model.Filters.eq;
 
 @Repository
 public class RatingResource implements IRatingResource {
-       private static final TransactionOptions txnOptions = TransactionOptions.builder()
+    private static final TransactionOptions txnOptions = TransactionOptions.builder()
             .readPreference(ReadPreference.primary())
             .readConcern(ReadConcern.MAJORITY)
             .writeConcern(WriteConcern.MAJORITY)

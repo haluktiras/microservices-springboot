@@ -16,7 +16,7 @@ import static org.springframework.web.reactive.function.client.WebClient.*;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableCircuitBreaker
-//@EnableHystrixDashboard // localhost:8081/hystrix  --> for monitoring - http://localhost:8081/actuator/hystrix.stream  api monitoring
+@EnableHystrixDashboard // localhost:8081/hystrix  --> for monitoring - http://localhost:8081/actuator/hystrix.stream  api monitoring
 public class BookCatalogServiceApplication {
 
     @LoadBalanced

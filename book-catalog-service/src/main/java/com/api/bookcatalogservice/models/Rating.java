@@ -1,32 +1,15 @@
 package com.api.bookcatalogservice.models;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
+
+@Data
+@RequiredArgsConstructor
+@NoArgsConstructor
 public class Rating {
 
-    private String bookId;
-    private int rating;
-
-    public Rating() {
-
-    }
-
-    public Rating(String bookId, int rating) {
-        this.bookId = bookId;
-        this.rating = rating;
-    }
-
-    public String getBookId() {
-        return bookId;
-    }
-
-    public void setBookId(String bookId) {
-        this.bookId = bookId;
-    }
-
-    public int getRating() {
-        return rating;
-    }
-
-    public void setRating(int rating) {
-        this.rating = rating;
-    }
+    @NonNull private String bookId;
+    @NonNull private int rating;
 }

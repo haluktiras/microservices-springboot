@@ -1,37 +1,13 @@
 package com.api.bookcatalogservice.models;
 
+import lombok.Data;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
+
+@Data
+@RequiredArgsConstructor
 public class Catalog {
-    private String name;
-    private String desc;
-    private int rating;
-
-    public Catalog(String name, String desc, int rating) {
-        this.name = name;
-        this.desc = desc;
-        this.rating = rating;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDesc() {
-        return desc;
-    }
-
-    public void setDesc(String desc) {
-        this.desc = desc;
-    }
-
-    public int getRating() {
-        return rating;
-    }
-
-    public void setRating(int rating) {
-        this.rating = rating;
-    }
+    @NonNull private String name;
+    @NonNull private String desc;
+    @NonNull private int rating;
 }
