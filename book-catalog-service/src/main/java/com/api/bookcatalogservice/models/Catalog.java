@@ -1,13 +1,13 @@
 package com.api.bookcatalogservice.models;
 
+import lombok.Builder;
 import lombok.Data;
 import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
 
 @Data
-@RequiredArgsConstructor
+@Builder
 public class Catalog {
-    @NonNull private String name;
-    @NonNull private String desc;
-    @NonNull private int rating;
+    private @NonNull String name;
+    private @NonNull String desc;
+    private @NonNull int rating;
 }

@@ -21,11 +21,19 @@ public class BookInfo {
     @HystrixCommand(fallbackMethod = "getFallbackCatalogItem")
     public Catalog getCatalogItem(Rating rating) {
         Book book = restTemplate.getForObject("http://book-info-service/books/" + rating.getBookId(), Book.class);
-        return new Catalog(book.getName(), book.getDescription(), rating.getRating());
+        return Catalog.builder()
+                .name(book.getName())
+                .desc(book.getDescription())
+                .rating(rating.getRating())
+                .build();
     }
 
     private Catalog getFallbackCatalogItem(Rating rating) {
-        return new Catalog("Book name not", "", rating.getRating());
+        return Catalog.builder()
+                .name("Book name not")
+                .desc("")
+                .rating(rating.getRating())
+                .build();
     }
 
 }

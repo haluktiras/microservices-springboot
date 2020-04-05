@@ -21,10 +21,14 @@ public class UserRatingInfo {
     }
 
     private UserRating getFallbackUserRating(String id) {
-        UserRating userRating = new UserRating();
-        userRating.setUserId("");
-        userRating.setRatings(Arrays.asList(new Rating("0",0)));
-        return userRating;
+
+        return UserRating.builder()
+                .userId("")
+                .ratings(Arrays.asList(Rating.builder()
+                        .bookId("0")
+                        .rating(0)
+                        .build()))
+                .build();
     }
 
 

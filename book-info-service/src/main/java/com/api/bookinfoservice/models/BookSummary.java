@@ -3,6 +3,7 @@ package com.api.bookinfoservice.models;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NonNull;
@@ -10,9 +11,9 @@ import lombok.NonNull;
 import java.util.Date;
 import java.util.Objects;
 
-@NonNull
-@EqualsAndHashCode
 @Data
+@Builder
+@EqualsAndHashCode
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class BookSummary {
 
@@ -20,7 +21,7 @@ public class BookSummary {
     private String id;
     private String author;
     private String overview;
-    private Date createdAt = new Date();
+    private Date createdAt;
 
     @Override
     public String toString() {
