@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/book-catalog-service/book-catalog-service.iml" filepath="$PROJECT_DIR$/book-catalog-service/book-catalog-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/book-info-service/book-info-service.iml" filepath="$PROJECT_DIR$/book-info-service/book-info-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/discovery-server/discovery-server.iml" filepath="$PROJECT_DIR$/discovery-server/discovery-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ratings-data-service/ratings-data-service.iml" filepath="$PROJECT_DIR$/ratings-data-service/ratings-data-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/spring-boot-microservices-v2.iml" filepath="$PROJECT_DIR$/.idea/spring-boot-microservices-v2.iml" />
     </modules>
   </component>
